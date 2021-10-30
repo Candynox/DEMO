@@ -38,5 +38,12 @@ b:visited{ color: black;}
     font-size: 25px;
     line-height: 10px;
     letter-spacing: 3px;
+}
+
+.box{
+     background-color: rgb(126,74,21,0.8);
+     margin: auto;
+     height: 320px;
+     width: 500px;
 
 }
