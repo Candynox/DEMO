@@ -1,0 +1,39 @@
+#abc{
+    text-align: center;
+    font-family: monospace;
+    width: 98;
+    /*border: 2px solid black;*/
+    line-height: 1em;
+    font-weight: bold;
+}
+
+.e{ font-weight: bold;
+    text-indent: 1em;
+    float: left;
+    padding: 1em 0em 0em 2.9em;
+}
+.a{ font-size: small;
+    color: rgb(137, 106, 167);
+    letter-spacing: 2px;
+    padding-top: 1.5em;}
+.b{ font-size: 30px;
+    letter-spacing: 3px;}
+.d{ font-family:inherit;}
+
+#main{
+    margin: 0px 60px 0px 60px;
+    height: 400px;
+    color: rgb(235, 241, 236);
+    background-image: url(../images/hat-cafe.jpg) ;
+    background-size:  ;
+    border: 1px solid black;
+}
+
+.text{
+    text-align: center;
+    padding: 1em ;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 10px;
+    letter-spacing: 3px;
+}

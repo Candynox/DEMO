@@ -1,0 +1,13 @@
+
+img{ display: inline-block;
+    width: 30%;
+    padding:inherit;}
+
+p{ color: rgb(145, 145, 145);
+    font-size: 1em;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height-step: 5px;}
+li{ font-weight: bold;
+    font-size: 18px;} 
+a:visited{ color: rgb(27, 5, 5);}
+a:hover{ color: brown;}
