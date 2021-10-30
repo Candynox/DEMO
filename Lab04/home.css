@@ -17,8 +17,10 @@
     letter-spacing: 2px;
     padding-top: 1.5em;}
 .b{ font-size: 30px;
-    letter-spacing: 3px;}
+    letter-spacing: 3.5px;}
 .d{ font-family:inherit;}
+
+b:visited{ color: black;}
 
 #main{
     margin: 0px 60px 0px 60px;
@@ -36,4 +38,5 @@
     font-size: 25px;
     line-height: 10px;
     letter-spacing: 3px;
+
 }
