@@ -1,0 +1,27 @@
+@media all and (max-width:850px){
+
+.a{
+    font-size: 14px;
+    text-align: center;
+    line-height: 2em;
+    
+}
+
+#main{
+    background-image: url(../images/hat-cafe.jpg);
+    background-size: initial;
+}
+.box{
+    margin: auto;
+    background-color: rgb(126,74,21,0.8);
+    height: auto;
+    width: auto;
+
+}
+
+.e{ font-weight: bold;
+    margin: auto;
+    padding: 1.5em;
+    text-align: center;
+}
+}

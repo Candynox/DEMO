@@ -1,0 +1,5 @@
+@media all and (max-width: 900px){
+    img {
+        width: 100%;
+        display: inline-block;
+}
