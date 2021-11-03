@@ -1,0 +1,17 @@
+.A{ text-align: center;
+    font-size: 1.3em;
+    padding: 0.5em 0 0em 0;
+    font-family:serif;}
+ .A1{ border: rgb(212, 209, 209) solid 0.5em;
+     width: 25em;
+     height: 5em;
+     margin: auto;
+     padding: 0 0 1em 0; }
+ .A2{ padding: 1em 0 0 0;}
+
+ .B img{ width: 20%;
+     padding: 0 0 0 0;}
+
+ #text{ color: rgb(179, 107, 24);}
+
+ h3{ padding: 0 0 0 17em;}
