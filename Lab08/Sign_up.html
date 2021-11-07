@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Sign up</h2>
+    <hr>
+    <form action="../Lab08/Login_Welcome.html" method="get"></form>
+        <label for="">Username</label>
+        <input type="text" name="txtID" id="txtID" placeholder="nhap tai khoan"
+                autofocus required> <br> <br>
+
+                <label for="">Password</label>
+                <input type="password" name="txtPass" id="txtPass" pattern="^\d{3}$"
+                        placeholder="nhap mat ma" required> <br> <br>
+
+                <label for="">Email</label>
+                <input type="email" name="txtMail" id="txtMail" 
+                        placeholder="nhap email"> <br> <br>
+                
+                <label for="">Gender</label>
+                Male <input type="radio" name="rdGender" id="rdMale" checked value="male">
+                Female <input type="radio" name="rdGender" id="rdFemale" value="female"> <br> <br>
+
+                <label for="">Location</label>
+                <select name="cbLoc" id="cbLoc">
+                    <option value="SG">Saigon</option>
+                    <option value="HU">HUE</option>
+                    <option value="HN">Ha noi</option>
+                    <option value="CT">Can tho</option>
+                </select> <br> <br>
+                 
+                <label for="">Rating</label>
+                <input type="number" name="txtRate" id="txtRate" min="1" max="5" value="4" required>
+                <br> <br>
+
+    <input type="submit" value="Submit" name="btnOK">
+    <input type="reset" value="Reset">
+</body>
+</html>
