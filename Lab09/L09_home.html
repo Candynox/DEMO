@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Bemindethuong</title>
+</head>
+<style>
+    .to-top{
+	color:white;
+	padding-top:1.8em;
+	display:inline-block;/* or block */
+	position:relative;
+	border-color:white;
+	text-decoration:none;
+	transition:all .3s ease-out;
+}
+.to-top:before{
+	content:'▲';
+	font-size:.9em;
+	position:absolute;
+	top:0;
+	left:50%;
+	margin-left:-.7em;
+	border:solid .13em white;
+	border-radius:10em;
+	width:1.4em;
+	height:1.4em;
+	line-height:1.3em;
+	border-color:inherit;
+	transition:transform .5s ease-in;
+}
+.to-top:hover{
+	color:pink;
+	border-color:pink;
+}
+.to-top:hover:before{
+	transform: rotate(360deg);
+}
+</style>
+<body>
+    <header>
+        <nav>
+            <h3>Bemindethuong</h3>
+            <div class="box">
+                <div class="container">
+                    <span class="icon"> <i class="f-search"></i></span>
+                    <input type="search" id="search" placeholder="Search..">
+                </div>
+            </div>
+        <ul>
+            <li><a href="../Lab08/L08_home_Login.html">Login</a></li>
+            <li><a href="../Lab08/L08_home_signup.html">Sign up</a></li>
+        </ul>
+        </nav>
+    </header>
+
+
+    <a href="#" class="to-top">Back to top</a>
+</body>
+</html>
