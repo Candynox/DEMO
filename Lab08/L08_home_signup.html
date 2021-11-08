@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<style>
+    input[type=text], [type=email], [type=password]{
+        width: 20%;
+        height: 25px;
+        background-color: rgb(232, 237, 240);
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    input[type=text2]{
+        width: 20%;
+        height: 40px;
+        background-color: rgb(232, 237, 240);
+        border: 1px solid #ccc;
+    }
+
+    input[type=submit]{
+        width: 17.8rem;
+        height: 30px;
+        text-align: center;
+        color: white;
+        background-color: rgb(74, 201, 114);
+        border: 1px solid rgb(74, 201, 114);
+        cursor: pointer;
+    }
+
+    h3{ color: rgb(224, 127, 106);}
+    h2{ color: rgb(29, 80, 29);
+        padding-left: 4.9rem;}
+
+    div{ 
+        border-radius: 5px;
+        border: 1px solid blanchedalmond;
+        background-color: rgb(243, 247, 248);
+        padding: 2rem;}
+        
+    *{ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+</style>
+<body>
+    <div>
+    <form action="../Lab08/L08_home.html">
+        <h2>Sign Up</h2> 
+        <h3>Your basic info</h3>
+
+        <p>Name:</p>
+            <input type="text" name="txtUser" id="txtUser" placeholder="Enter account" 
+                autofocus required> <br>
+        <p>Email:</p>
+            <input type="email" name="txtMail" id="txtMail" placeholder="Enter email"
+                required> <br>
+        <p>Password:</p>
+            <input type="password" name="txtPass" id="txtPass" pattern="^\d{3}$"
+                placeholder="Enter password">
+        <p>Age:</p>
+            <input type="radio" name="genre" value="Under18" checked>Under 18 <br>
+            <input type="radio" name="genre" value="18or">18 or older <br> <br>
+
+        <h3>Your profile</h3>
+
+        <p>Biography:</p>
+        <input type="text2" name="txt" id="txt" >
+        <p>Job Role:</p>
+        <select name="user_job" id="job">
+            <optgroup label="Web">
+                <option value="FrontEnd">Front-End Developer</option>
+                <option value="PHP">PHP Developer</option>
+                <option value="Python">Python Developer</option>
+                <option value="Rails">Rails Developer</option>
+                <option value="WebD">Web Developer</option>
+                <option value="WordPress">WordPress Developer</option>
+            </optgroup>
+
+            <optgroup label="Mobile">
+                <option value="AndroidD">Android Developer</option>
+                <option value="IOS">IOS Developer</option>
+                <option value="MoblieD">Mobile Developer</option>
+            </optgroup>
+
+            <optgroup label="Business">
+                <option value="BussinessOwner">Bussiness Owner</option>
+                <option value="Freelancer">Freelancer</option>
+            </optgroup>
+
+            <optgroup label="Other">
+                <option value="secretary">secretary</option>
+                <option value="Maintenace">Maintenace</option>
+            </optgroup>
+        </select> <br> <br>
+        <input type="submit" value="Sign up">
+    </form>
+    </div>
+</body>
+</html>
