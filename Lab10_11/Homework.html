@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 11 Homework</title>
+</head>
+<style>
+    .AOB {
+        border: 1px solid gray;
+        width: 400px;
+        height: 21em;
+        padding: 1em 1em 0 1em;
+        background-color: rgb(245, 245, 220);
+    }
+
+    h2{ color: rgb( 0, 128, 0);}
+
+    .AO{ float: left;
+    margin-top: 6px;
+    width: 38%;}
+
+    .A{ float: left;
+    margin-top: 6px;
+    width: 62%;}
+
+    .row:after{
+        float: right;
+        display: table;
+        clear: both;
+     }
+
+
+</style>
+<body>
+    <div class="AOB">
+    <h2>
+        Enter details of your account 
+    </h2>
+    <hr>
+    <form action="#" name="formLG" id="formLG" onsubmit="checkLogin()">
+
+    <div class="row">
+        <div class="AO">
+            <label for="Fname">First name</label> 
+            </div>
+        <div class="A"> 
+        <input type="text" name="txtFN" id="txtFN" placeholder="Your name .."
+                autofocus required> <br> <br>
+            </div>
+    </div>
+
+    <div class="row">
+        <div class="AO">
+            <label for="Fname">Last name</label> 
+        </div>
+        <div class="A"><input type="text" name="txtLN" id="txtLN" placeholder="Your last name .."
+                required> <br> <br>
+            </div>
+    </div>
+
+    <div class="row">
+        <div class="AO">
+            <label for="Fname">Email</label> 
+        </div>
+        <div class="A"><input type="email" name="txtemail" id="txtemail" placeholder="Enter email"
+            > <br> <br>
+            </div>
+    </div>        
+
+    <div class="row">
+        <div class="AO">
+            <label for="Fname">Age</label> 
+        </div>
+        <div class="A"><input type="number" name="number" id="number" placeholder="Enter a age"
+            min="18" max="30"> <br> <br>
+            </div>
+    </div>
+
+    <div class="row">
+        <div class="AO">
+            <label for="Fname">Are you employed</label> 
+        </div>
+        <div class="A">
+            <input type="checkbox" name="Yes" id="Yes" value="Yes"> 
+            <label for="Yes">Yes</label>
+            <input type="checkbox" name="No" id="No" value="No"> 
+            <label for="No">No</label>
+            </div>
+        </div>
+        <hr>
+     
+        <input type="submit" value="OK">
+        <input type="reset" value="Cancel">
+    </form>
+    </div>
+                    <!-- ////// -->
+    <script>
+        function checkLogin() {
+            var FN = formLG.txtFN.value;
+            var LN = formLG.txtLN.value;
+
+            if( FN !="Aptech" || LN !="FPT") {
+                alert("Login Failed !");
+            }
+            else{
+                alert("Login Successfil !");
+            }
+        }
+    </script>
+</body>
+</html>
