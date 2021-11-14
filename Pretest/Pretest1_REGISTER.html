@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../Pretest/header_pretest1.css">
+</head>
+<style>
+    .body{ 
+        width: 650px;
+        padding: 17em 0 1em 3em;
+        margin: auto;
+    }
+
+    .AO{ float: left;
+    margin-top: 6px;
+    text-indent: 2em;
+    width: 35%;
+    font-weight: bold;}
+
+    .A{ float: left;
+    margin-top: 6px;
+    width: 65%;}
+
+    .row:after{
+        display: table;
+        clear: both;
+     }
+
+    h2{
+        font-size: 28px;
+        background-color: coral;
+        width: 100%;
+        height: 2.5em;
+        text-align: center;
+        box-sizing: border-box;
+        padding-top: 0.1em;}
+
+    .Box4{
+        border: solid black 5px;
+        border-top: none;
+        /* display: block; */
+    }
+
+    .Box3{
+        border-top: 5px solid black;
+        background-color: coral;
+        /* display: block; */
+    }
+    
+    input[type=text], [type=email], [type=tel]{
+        height: 30px;
+        width: 300px;
+        border: 2px solid red;
+    }
+
+    input[type=text2] {
+        height: 100px;
+        width: 300px;
+    }
+
+    input[type=submit], [type=reset]{
+        padding: 1em 1.5em;
+        cursor: pointer;
+        border-radius: 12px;
+        text-align: center;
+    }
+    .AB{
+        text-align: center;
+    }
+
+    /* #date{text-indent: 10x;height:25px; width:200px;} */
+</style>
+<body>
+    <!-- /// -->
+    <header>
+        <div class="Box1">
+            <h1 style="text-align: center;">Online Shopee</h1> <br>
+        </div>
+
+        <div class="Box2" style="top: 10em;">
+            <a href="../Pretest/Pretest1_HOME.html">HOME</a>
+            <a href="">PRODUTCS</a>
+            <a href="">SHOPS</a>
+            <a href="#">REGISTER</a>
+            <a href="">SIGNIN</a>
+        </div>
+    </header>
+    <!-- ///// -->
+
+    <div class="body">
+        <div class="Box4">
+            <div class="Box3">
+                <h2>Member Information</h2>
+                </div>
+        <form action="" id="form-DK" >
+            <div class="row">
+                <div class="AO">
+                <label for="FN">Full name</label>
+            </div>
+            <div class="A">
+                <input type="text" name="txtFN" id="txtFN" placeholder="Yours name .."
+                autofocus required>    <br>
+            </div>
+            </div>
+
+            <div class="row">
+                <div class="AO">
+                    <label for="Gender">Gender</label>
+                </div>
+                <div class="A">
+                    <input type="radio" name="gender" id="gender" value="Male">Male
+                    <input type="radio" name="gender" id="gender" value="Female">Female <br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="AO">
+                    <label for="Hobbies">Hobbies</label>
+                </div>
+                <div class="A">
+                    <input type="checkbox" name="SP" id="SP" value="SP">
+                    <label for="SP">Shopping</label>
+                    <input type="checkbox" name="EO" id="EO" value="EO">
+                    <label for="EO">Eating out</label>
+                    <input type="checkbox" name="S" id="S" value="S">
+                    <label for="S">Sporting</label> <br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="AO">
+                    <label for="Date">Date of Birth</label>
+                </div>
+                <div class="A">
+                    <input type="date" name="date" id="date">
+                    <!-- <input type="date" name="date" id="date" onchange="mydate();" hidden/> -->
+                    <!-- <input type="text3" name="ndate" id="date" onclick="mydate1();" hedden/>
+                    <input type="button" value="date" onclick="mydate1();" /> <br> -->
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="AO">
+                    <label for="Address">Address</label>
+                </div>
+                <div class="A">
+                    <input type="text" name="txtAr" id="txtAr" placeholder="Enter address .." required> <br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="AO">
+                    <label for="Email">Email </label>
+                </div>
+                <div class="A">
+                    <input type="email" name="txtmail" id="txtmail" placeholder="Enter email .." required> <br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="AO">
+                    <label for="Phone">Phone number</label>
+                </div>
+                <div class="A">
+                    <input type="tel" name="number" id="number" placeholder="Enter your phone number .." required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="AO">
+                    <label for="City">City </label>
+                </div>
+                <div class="A">
+                    <select name="City" id="City" required>
+                        <option value="select">---Select---</option>
+                        <option value="SG">Saigon</option>
+                        <option value="H">Hue</option>
+                        <option value="Hn">Hanoi</option>
+                        <option value="Dn">Danang</option>
+                    </select>
+                </div>
+
+            <div class="row">
+                <div class="AO">
+                    <label for="Comment">Comment</label>
+                </div>
+                <div class="A">
+                    <input type="text2" name="txtCm" id="txtCm" placeholder=""> <br> <br>
+                </div>
+            </div>
+            </div>
+
+        <div class="AB">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset"> <br> <br>
+        </div>
+
+        <!-- <textarea name="summary" id="summary" cols="60" rows="5" readonly></textarea> -->
+
+        </form>
+        </div>
+    </div>
+
+    <!-- //DATE// -->
+    <!-- <script>
+        function mydate1(){
+            document.getElementById("date").hidden=false;
+            document.getElementById("ndate").hidden=true;
+        }
+        function mydate(){
+            d = new Date(document.getElementById("date").value);
+            date = d.getDate();
+            mm = d.getMonth();
+            mm++;
+            yy = d.getFullYear();
+            document.getElementById("ndate").value = date + "/" + mm + "/" + yy
+            document.getElementById("ndate").hidden = false;
+            document.getElementById("date").hidden = true;
+        }
+    </script> -->
+    <script>
+        document.getElementById("form-DK").onsubmit = function(e) {
+            e.preventDefault();
+            
+            // document.write("<h2>This page says: <br>");
+            // document.write("<p>Member Information");
+            // document.write("-----------------");
+
+            let txtFN = new string(document.getElementById("txtFN").value.trim());
+            let gender = new string(document.getElementById("gender").value.trim());
+            // let  date = new string(document.getElementById("txtFN").value.trim());
+            // let txtAr = new string(document.getElementById("txtFN").value.trim());
+            // let txtmail = new string(document.getElementById("txtFN").value.trim());
+            // let number = new string(document.getElementById("txtFN").value.trim());
+            let a=["This page say:"];
+            a.push(`Name: ${txtFN}`);
+            a.push(`Gender: ${gender}`);
+
+            document.getElementById("form-DK").innerHTML = 
+            "Name" + txtFN + "<br>" + "Gender" + gender;
+        }
+        
+
+        
+    </script>
+</body>
+</html>

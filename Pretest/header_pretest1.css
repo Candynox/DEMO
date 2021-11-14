@@ -1,0 +1,35 @@
+*{
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Box1{
+    background-color: rgb(255, 123, 75);
+    font-size: 24px;
+    height: 5em;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.Box2{
+    border-top: black solid 5px;
+    border-bottom: black solid 5px;
+    padding: 1em 0 1em 0;
+    position: fixed;
+    overflow: hidden;
+    position: ;
+    left: 0;
+    right: 0;
+    display: inline-block;
+}
+.Box2 a{
+    color: black;
+    padding: 0 2.2em 0 2.2em;
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 4px;
+}

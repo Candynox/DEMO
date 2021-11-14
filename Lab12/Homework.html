@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+</head>
+<body>
+
+    <!-- HOMEWORK 2  -->
+    <script>
+        var students = new Array("Minh Anh", "Hoang Anh", "Trung Hau", "Thanh Sang", "Anh Vu", "Cam Tu", "Nhan Nghia", "Gia khang", "ThanhLan", "Tan Loi");
+
+        Array.prototype.displayItems = function(){
+        for (i = 0; i<this.length; i++){
+            document.write(this[i] + "<br/>");
+        }
+        }    
+         
+        document.write("<b> 1. Student List: </b><br/> ");
+        students.displayItems();
+        document.write("<i> => The number of items in students is " + students.length + "</i> <br/> <br/>");
+        document.write("<b> 2. The SORTED students list: </b><br/> ");
+        students.sort();
+        students.displayItems();
+    </script>
+    <!-- //////  -->
+
+    <SCript>
+        // document.write(
+    </SCript>
+</body>
+</html>

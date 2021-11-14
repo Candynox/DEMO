@@ -46,8 +46,8 @@
             <label for="Fname">First name</label> 
             </div>
         <div class="A"> 
-        <input type="text" name="txtFN" id="txtFN" placeholder="Your name .."
-                autofocus required> <br> <br>
+        <input type="text" name="txtFN" id="txtFN" placeholder="Your First name .."
+            autofocus required> <br> <br>
             </div>
     </div>
 
@@ -91,18 +91,20 @@
         </div>
         <hr>
      
-        <input type="submit" value="OK">
+        <input type="submit" value="OK" onclick="checkLogin()">
         <input type="reset" value="Cancel">
     </form>
     </div>
                     <!-- ////// -->
     <script>
         function checkLogin() {
+            return false;
             var FN = formLG.txtFN.value;
             var LN = formLG.txtLN.value;
 
             if( FN !="Aptech" || LN !="FPT") {
                 alert("Login Failed !");
+                
             }
             else{
                 alert("Login Successfil !");
