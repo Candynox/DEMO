@@ -98,27 +98,27 @@
         <form action="" id="form-DK" >
             <div class="row">
                 <div class="AO">
-                <label for="FN">Full name</label>
+                <label for="">Full name</label>
             </div>
             <div class="A">
-                <input type="text" name="txtFN" id="txtFN" placeholder="Yours name .."
+                <input type="text" name="name" id="name" placeholder="Yours name .."
                 autofocus required>    <br>
             </div>
             </div>
 
             <div class="row">
                 <div class="AO">
-                    <label for="Gender">Gender</label>
+                    <label for="">Gender</label>
                 </div>
                 <div class="A">
-                    <input type="radio" name="gender" id="gender" value="Male">Male
-                    <input type="radio" name="gender" id="gender" value="Female">Female <br>
+                    <input type="radio" name="gender" id="gender_m" value="Male" checked>Male
+                    <input type="radio" name="gender" id="gender_f" value="Female">Female <br>
                 </div>
             </div>
 
             <div class="row">
                 <div class="AO">
-                    <label for="Hobbies">Hobbies</label>
+                    <label for="">Hobbies</label>
                 </div>
                 <div class="A">
                     <input type="checkbox" name="SP" id="SP" value="SP">
@@ -132,7 +132,7 @@
 
             <div class="row">
                 <div class="AO">
-                    <label for="Date">Date of Birth</label>
+                    <label for="">Date of Birth</label>
                 </div>
                 <div class="A">
                     <input type="date" name="date" id="date">
@@ -144,7 +144,7 @@
 
             <div class="row">
                 <div class="AO">
-                    <label for="Address">Address</label>
+                    <label for="">Address</label>
                 </div>
                 <div class="A">
                     <input type="text" name="txtAr" id="txtAr" placeholder="Enter address .." required> <br>
@@ -153,7 +153,7 @@
 
             <div class="row">
                 <div class="AO">
-                    <label for="Email">Email </label>
+                    <label for="">Email </label>
                 </div>
                 <div class="A">
                     <input type="email" name="txtmail" id="txtmail" placeholder="Enter email .." required> <br>
@@ -162,7 +162,7 @@
 
             <div class="row">
                 <div class="AO">
-                    <label for="Phone">Phone number</label>
+                    <label for="">Phone number</label>
                 </div>
                 <div class="A">
                     <input type="tel" name="number" id="number" placeholder="Enter your phone number .." required>
@@ -171,7 +171,7 @@
 
             <div class="row">
                 <div class="AO">
-                    <label for="City">City </label>
+                    <label for="">City </label>
                 </div>
                 <div class="A">
                     <select name="City" id="City" required>
@@ -224,27 +224,25 @@
     <script>
         document.getElementById("form-DK").onsubmit = function(e) {
             e.preventDefault();
-            
-            // document.write("<h2>This page says: <br>");
-            // document.write("<p>Member Information");
-            // document.write("-----------------");
 
-            let txtFN = new string(document.getElementById("txtFN").value.trim());
-            let gender = new string(document.getElementById("gender").value.trim());
-            // let  date = new string(document.getElementById("txtFN").value.trim());
-            // let txtAr = new string(document.getElementById("txtFN").value.trim());
-            // let txtmail = new string(document.getElementById("txtFN").value.trim());
-            // let number = new string(document.getElementById("txtFN").value.trim());
-            let a=["This page say:"];
-            a.push(`Name: ${txtFN}`);
+            let name = document.getElementById("name").value.trim();
+            let gender = document.getElementById("gender_m").ariaChecked?"Male":"Female"
+            let  date = document.getElementById("date").value.trim();
+            let txtAr = document.getElementById("txtAr").value.trim();
+            let txtmail = document.getElementById("txtmail").value.trim();
+            let number = document.getElementById("number").value.trim();     
+           
+            let a=["<h2>This page says: </h2> <p>Member Information</p> -------------"];
+            a.push(`Name : ${name}`);
             a.push(`Gender: ${gender}`);
+            a.push(`Date: ${date}`);
+            a.push(`Address: ${txtAr}`);
+            a.push(`Email: ${txtmail}`);
+            a.push(`Phone number: ${number}`);
 
-            document.getElementById("form-DK").innerHTML = 
-            "Name" + txtFN + "<br>" + "Gender" + gender;
+            let new_tab = window.open();
+            new_tab.document.writeln(a.join("<br/>"));
         }
-        
-
-        
     </script>
 </body>
 </html>
