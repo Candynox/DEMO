@@ -176,10 +176,10 @@
                 <div class="A">
                     <select name="City" id="City" required>
                         <option value="select">---Select---</option>
-                        <option value="SG">Saigon</option>
-                        <option value="H">Hue</option>
-                        <option value="Hn">Hanoi</option>
-                        <option value="Dn">Danang</option>
+                        <option value="Saigon">Saigon</option>
+                        <option value="Hue">Hue</option>
+                        <option value="Hanoi">Hanoi</option>
+                        <option value="Danang">Danang</option>
                     </select>
                 </div>
 
@@ -231,6 +231,7 @@
             let txtAr = document.getElementById("txtAr").value.trim();
             let txtmail = document.getElementById("txtmail").value.trim();
             let number = document.getElementById("number").value.trim();     
+            let City = document.getElementById("City").value;  
            
             let a=["<h2>This page says: </h2> <p>Member Information</p> -------------"];
             a.push(`Name : ${name}`);
@@ -239,6 +240,7 @@
             a.push(`Address: ${txtAr}`);
             a.push(`Email: ${txtmail}`);
             a.push(`Phone number: ${number}`);
+            a.push(`City: ${City}`)
 
             let new_tab = window.open();
             new_tab.document.writeln(a.join("<br/>"));
