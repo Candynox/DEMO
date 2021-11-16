@@ -231,7 +231,8 @@
             let txtAr = document.getElementById("txtAr").value.trim();
             let txtmail = document.getElementById("txtmail").value.trim();
             let number = document.getElementById("number").value.trim();     
-            let City = document.getElementById("City").value;  
+            let City = document.getElementById("City").value; 
+            let txtCm = document.getElementById("txtCm").value; 
            
             let a=["<h2>This page says: </h2> <p>Member Information</p> -------------"];
             a.push(`Name : ${name}`);
@@ -240,7 +241,8 @@
             a.push(`Address: ${txtAr}`);
             a.push(`Email: ${txtmail}`);
             a.push(`Phone number: ${number}`);
-            a.push(`City: ${City}`)
+            a.push(`City: ${City}`);
+            a.push(`Command: ${txtCm}`)
 
             let new_tab = window.open();
             new_tab.document.writeln(a.join("<br/>"));
