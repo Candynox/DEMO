@@ -106,11 +106,11 @@
                     <label for="">Hobbies</label>
                 </div>
                 <div class="A">
-                    <input type="checkbox" name="SP" id="SP" value="SP">
+                    <input type="checkbox" name="HB" id="HB" value="SP">
                     <label for="SP">Shopping</label>
-                    <input type="checkbox" name="EO" id="EO" value="EO">
+                    <input type="checkbox" name="HB" id="HB" value="EO">
                     <label for="EO">Eating out</label>
-                    <input type="checkbox" name="S" id="S" value="S">
+                    <input type="checkbox" name="HB" id="HB" value="S">
                     <label for="S">Sporting</label> <br>
                 </div>
             </div>
@@ -212,6 +212,7 @@
 
             let name = document.getElementById("name").value.trim();
             let gender = document.getElementById("gender_m").ariaChecked?"Male":"Female"
+            let HB = document.getElementById("HB").value;
             let  date = document.getElementById("date").value.trim();
             let txtAr = document.getElementById("txtAr").value.trim();
             let txtmail = document.getElementById("txtmail").value.trim();
