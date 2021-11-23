@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    a{ text-decoration: none;
+    font-size: 30px;
+    color: white;
+    letter-spacing: 1px;
+    padding: 0 1.5em 0 1.5em;}
+
+
+    .A{ background-color: rgb(255, 152, 115);}
+
+    .body img{ width: 100%;}
+
+    span{ color: red;}
+
+    .row {
+        margin: 20px;
+    }
+
+    .row label {
+        display: inline-block;
+        width: 180px;
+        float: none;
+        padding-left: 11em;
+    }
+    .row:after{
+        display: table;
+        clear: both;}
+
+    .AB{ padding-left: 19em;
+    padding-top: 1em;}
+</style>
+<body>
+        <header>
+            <img src="../images/Logo1.PNG" alt="">
+        </header>
+        <div class="A">
+                <a href="../Exam/Exam.html">Homepage</a>
+                <a href="">Utilities</a>
+                <a href="">Share</a>
+                <a href="">Knowledge</a>
+                <a href="../Exam/Exam_register.html">Register</a>
+                <a href="">Login</a>
+                <a href="">About us</a>
+        </div>
+    <form action="" id="FORM" style="padding-top: 18px;">
+        <div class="row">
+            <label for="">Frist name:</label>
+            <input type="text" name="fname" id="fname" required><span>*</span>
+        </div>
+
+        <div class="row">
+            <label for="">Last name:</label>
+            <input type="text" name="lname" id="lname" required><span>*</span>
+        </div>
+
+        <div class="row">
+            <label for="">Country:</label>
+            <select name="country" id="country" required>
+                <option value="Vietnam">Vietnam</option>
+                <option value="India">India</option>
+                <option value="Japan">Japan</option>
+            </select>
+        </div>
+
+        <div class="row">              
+                <label for="">Gender:</label>
+                <input type="radio" name="gender" id="gender_m" value="Male" checked>Male
+                <input type="radio" name="gender" id="gender_f" value="Female">Female <br>
+        </div>
+
+        <div class="row">
+            <label for="">Email:</label>
+            <input type="mail" name="mail" id="mail" required><span>*</span>
+        </div>
+        <div class="row">
+            <label for="">Telephone:</label>
+            <input type="tel" name="phone" id="phone" required><span>*</span>
+        </div>
+
+        <div class="AB">
+            <input type="submit" value="Register">
+            <input type="reset" value="Reset">
+            </div>
+    </form>
+    <script>
+        document.getElementById("FORM").onsubmit = function (e) {
+            e.preventDefault();
+
+            let fname = document.getElementById("fname").value.trim();
+            let lname = document.getElementById("lname").value.trim();
+            let country = document.getElementById("country").value;
+            let gender = document.getElementById("gender_m").ariaChecked?"Male":"Female"            
+            let email = document.getElementById("mail").value.trim();
+            let phone = document.getElementById("phone").value.trim();
+
+            let a = ["<h2>Member Information</h2>"];
+            a.push(`Frist name : ${fname}`);
+            a.push(`Last name: ${lname}`);
+            a.push(`Coutry: ${country}`);
+            a.push(`Gender: ${gender}`);
+            a.push(`Email: ${mail}`);
+            a.push(`Phone number: ${phone}`);
+
+            let r = /^[0-9]{8,12}$/;
+            if (r.test(phone) == false) {
+                alert("your phone number should be at least 8 digits and at least 12 digits !");
+                document.getElementById("phone").focus();
+                return;
+            }
+
+            alert("Your Information has bên sent successfully!");
+            </script>
+</body>
+</html>

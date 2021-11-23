@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,41 +8,61 @@
     <title>REGISTRATION FORM </title>
 </head>
 <style>
-    .AOB { border: black solid 1px;
-    width: 50%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
-    .AB{ text-align: center;}
+    .AOB {
+        border: black solid 1px;
+        width: 50%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-    b{ color: red;}
-    h3, h2{ color: royalblue;}
+    .AB {
+        text-align: center;
+    }
 
-    h3 { padding-left: 1.2em;}
+    b {
+        color: red;
+    }
+
+    h3,
+    h2 {
+        color: royalblue;
+    }
+
+    h3 {
+        padding-left: 1.2em;
+    }
 
     .row {
         margin: 15px;
         padding: 1px;
     }
 
-    .row label{
+    .row label {
         display: inline-block;
         width: 180px;
         float: none;
         padding-left: 11em;
     }
-    .row [type=text], [type=tel], [type=number], [type=password], [type=email]{
+
+    .row [type=text],
+    [type=tel],
+    [type=number],
+    [type=password],
+    [type=email] {
         width: 250px;
         height: 20px;
     }
-    .row [type=text2]{
+
+    .row [type=text2] {
         width: 250px;
         height: 65px;
     }
 
-    .AB [type=submit], [type=reset]{
+    .AB [type=submit],
+    [type=reset] {
         padding: 10px;
     }
-
 </style>
+
 <body>
     <div class="AOB">
         <form action="" id="FORM">
@@ -89,13 +110,8 @@
 
             <div class="row">
                 <label for="">Sex</label>
-            <input type="radio" name="radio" id="radio_m" checked value="male">Male 
-            <input type="radio" name="radio" id="radio_f" value="female">Female 
-            </div>
-
-            <div class="row">
-                <label for="">date of birth</label>
-                <input type="date" name="date" id="date">
+                <input type="radio" name="radio" id="radio_m" checked value="male">Male
+                <input type="radio" name="radio" id="radio_f" value="female">Female
             </div>
 
             <div class="row">
@@ -112,9 +128,9 @@
 
             <div class="row">
                 <label for="">Hobbies</label>
-                    <input type="checkbox" name="swimming" id="swimming" value="swimming">Swimming
-                    <input type="checkbox" name="dance" id="dance" value="dance">Dancing
-                    <input type="checkbox" name="shopping" id="shopping" value="shopping">Shopping
+                <input type="checkbox" name="swimming" id="swimming" value="swimming">Swimming
+                <input type="checkbox" name="dance" id="dance" value="dance">Dancing
+                <input type="checkbox" name="shopping" id="shopping" value="shopping">Shopping
             </div>
 
             <div class="row">
@@ -125,27 +141,27 @@
             <div class="AB">
                 <input type="submit" value="Submit">
                 <input type="reset" value="Reset"> <br> <br>
-                </div>
+            </div>
         </form>
     </div>
 
     <script>
-         document.getElementById("FORM").onsubmit = function(e) {
+        document.getElementById("FORM").onsubmit = function (e) {
             e.preventDefault();
 
             let login = document.getElementById("login").value.trim();
             let name = document.getElementById("name").value.trim();
             let pass = document.getElementById("pass").value.trim();
             let pass2 = document.getElementById("pass2").value.trim();
-            let  address = document.getElementById("address").value.trim();
+            let address = document.getElementById("address").value.trim();
             let email = document.getElementById("email").value.trim();
-            let radio = document.getElementById("radio_m").ariaChecked?"Male":"Female"  
-            let date = document.getElementById("date").value; 
+            let gender = document.getElementById("gender_m").ariaChecked?"Male":"Female"
+            let date = document.getElementById("date").value;
             let country = document.getElementById("country").value;
-            let number = document.getElementById("number").value.trim();  
+            let number = document.getElementById("number").value.trim();
             let comment = document.getElementById("comment").value.trim();
 
-            let a=["<h2>Member Information</h2>"];
+            let a = ["<h2>Member Information</h2>"];
             a.push(`Login : ${login}`);
             a.push(`Full name: ${name}`);
             a.push(`Address: ${address}`);
@@ -156,8 +172,8 @@
             a.push(`Phone number: ${number}`);
             a.push(`Comment: ${comment}`)
 
-            let r = /^[a-z A-Z]{5,}$/;
-            if (r.test(login) == false || r.test(name) == false){
+            let r = /^[a-zA-Z]{5,}$/;
+            if (r.test(login) == false || r.test(name) == false) {
                 alert("Please enter at least 5 characters !");
                 document.getElementById("login").focus();
                 document.getElementById("name").focus();
@@ -165,23 +181,23 @@
             }
 
             r = /^[a-zA-Z0-9]{3,}@[a-zA-Z0-9]{3,}.[a-zA-Z0-9]{3,}$/;
-            if (r.test(email) == false){
+            if (r.test(email) == false) {
                 alert("Your email is invalid , please try again !");
                 document.getElementById("email").focus();
                 return;
             }
 
             r = /^[0-9]{8,13}$/;
-            if (r.test(number) == false){
+            if (r.test(number) == false) {
                 alert("your phone number should be at least 8 digits and at least 13 digits !");
                 document.getElementById("login").focus();
                 return;
             }
 
             //pass
-            if(pass != pass2){
+            if (pass != pass2) {
                 alert("The entered password does not match !");
-                document.getElementById("pass2"). focus();
+                document.getElementById("pass2").focus();
                 return;
             }
 
@@ -192,4 +208,5 @@
         }
     </script>
 </body>
+
 </html>
